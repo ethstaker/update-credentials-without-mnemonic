@@ -29,7 +29,11 @@ jobs:
           match_directories: false
 
       - name: Error on modified and deleted validators, or outside files
+<<<<<<< HEAD
         if: ${{ (steps.changed-signatures.outputs.all_changed_and_modified_files != steps.changed-signatures.outputs.added_files) || (steps.changed-parent.outputs.any_modified == 'true' && github.actor != 'valefar-on-discord') }}
+=======
+        if: ${{ (steps.changed-signature.outputs.all_changed_and_modified_files != steps.changed-signatures.outputs.added_files) || (steps.changed-parent.outputs.any_modified == 'true' && github.actor != 'valefar-on-discord') }}
+>>>>>>> d93031a (Adding verification logic and instructions)
         run: |
           echo "No modifications/deletions/external changes allowed"
           echo "Submitter: ${{github.actor}}"
@@ -60,7 +64,13 @@ jobs:
             filename=$(basename -- "$file")
             index="${filename%.*}"
             extension="${filename##*.}"
+<<<<<<< HEAD
             cat $GITHUB_WORKSPACE/signatures/${index}.json | jq -e ".validator_index==${index}"
             echo "Ensure the signatures are valid"
             python $GITHUB_WORKSPACE/verify_signatures.py ./signatures/${index}.json
+=======
+            cat $GITHUB_WORKSPACE/signatures/${index}.json | jq -e ".validator_index==\"${index}\""
+            echo "Ensure the signatures are valid"
+            python verify-signatures.py ./signatures/${index}.json
+>>>>>>> d93031a (Adding verification logic and instructions)
           done
