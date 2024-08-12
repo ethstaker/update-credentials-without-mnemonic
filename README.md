@@ -68,7 +68,7 @@ As an example:
 
 ### Signature message format
 <div style="border: 1px solid #e74c3c; padding: 10px; background-color: #d9534f;">
-  <strong>⚠️ Alert:</strong> Ensure that the message does not contain any spaces or other formatting like newlines
+  <strong>⚠️ Alert:</strong> Ensure that the message does not contain any spaces or other formatting like newlines. Ensure casing (uppercase/lowercase) is used consistently for the execution address across both the signature message and the keystore file. Signature verification will fail otherwise.
 </div>
 
 ```
