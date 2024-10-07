@@ -1,0 +1,6 @@
+{
+  "to_execution_address": "0x09983E6f1B669f48f0AB0d5dAda947069b0f9F9c",
+  "validator_index": 65,
+  "deposit_signature": "0x6bac8942dcc9fbb6934e85d652462c6e2a834c7fef0331aa721e51c6a5bfb3060cf4bf0eb4d0846104d833d17c8bd0e9f21667ff9fed1b5e9a2104d4a2d08a901b",
+  "keystore_signature": "0x84bca1a205fc3d93ebf4ef82ab3048237b40157aea11bf298c5eed1ff83b490a81f8ff436660a10ecad1c5c2290ed4e6128def3e016ecaf20cc54eed7145893858995ac5eec76311d1febe496da82c9b000be57199e43cea352a415180f8d05d"
+}
