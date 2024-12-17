@@ -16,7 +16,7 @@ jobs:
 
       - name: Get all changed files outside of signatures
         id: changed-parent
-        uses: tj-actions/changed-files@v35.4.4
+        uses: tj-actions/changed-files@v41.0.0
         with:
           base_sha: ${{ github.event.pull_request.base.sha }}
           files_ignore: |
@@ -24,7 +24,7 @@ jobs:
 
       - name: Get Changed Signatures
         id: changed-signatures
-        uses: tj-actions/changed-files@v35.4.4
+        uses: tj-actions/changed-files@v41.0.0
         with:
           base_sha: ${{ github.event.pull_request.base.sha }}
           files: signatures/*
